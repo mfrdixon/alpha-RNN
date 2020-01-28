@@ -1,2 +1,0 @@
-# alpha-RNN
-alpha-RNN
