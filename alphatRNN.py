@@ -18,7 +18,7 @@ class AlphatRNNCell(Layer):
         recurrent_activation: Activation function to use
             for the recurrent step
             (see [activations](../activations.md)).
-            Default: hyperbolic tangent (`tanh`).
+            Default: sigmoid (`sigmoid`).
             If you pass `None`, no activation is applied
             (ie. "linear" activation: `a(x) = x`).
         use_bias: Boolean, whether the layer uses a bias vector.
@@ -63,7 +63,7 @@ class AlphatRNNCell(Layer):
 
     def __init__(self, units,
                  activation='tanh',
-                 recurrent_activation='tanh',
+                 recurrent_activation='sigmoid',
                  use_bias=True,
                  kernel_initializer='glorot_uniform',
                  recurrent_initializer='orthogonal',
@@ -294,7 +294,7 @@ class AlphatRNN(RNN):
         recurrent_activation: Activation function to use
             for the recurrent step
             (see [activations](../activations.md)).
-            Default: hyperbolic tangent (`tanh`).
+            Default: sigmoid (`sigmoid`).
             If you pass `None`, no activation is applied
             (ie. "linear" activation: `a(x) = x`).
         use_bias: Boolean, whether the layer uses a bias vector.
@@ -369,7 +369,7 @@ class AlphatRNN(RNN):
     @interfaces.legacy_recurrent_support
     def __init__(self, units,
                  activation='tanh',
-                 recurrent_activation='tanh',
+                 recurrent_activation='sigmoid',
                  use_bias=True,
                  kernel_initializer='glorot_uniform',
                  recurrent_initializer='orthogonal',
